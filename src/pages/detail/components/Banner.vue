@@ -10,21 +10,24 @@
     </div>
     </div>
   </div>
+  <fade-animation>
   <common-gallary :imgs="imgs"
   v-show="showGallary"
   @close="handleGallaryClose"
   ></common-gallary>
+  </fade-animation>
   </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/Fade'
 export default {
   name: 'DetailBanner',
   data () {
     return {
       showGallary: false,
-      imgs: ['http://img1.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_r_800x800_ea3a0585.jpg']
+      imgs: ['http://img1.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_r_800x800_ea3a0585.jpg', 'http://img1.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_r_800x800_ea3a0585.jpg', 'http://img1.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_r_800x800_ea3a0585.jpg']
     }
   },
   methods: {
@@ -36,7 +39,8 @@ export default {
     }
   },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   }
 }
 </script>
